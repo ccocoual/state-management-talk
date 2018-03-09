@@ -2,12 +2,16 @@
   <div id="StateManagement">
 			<introduction></introduction>
 			<component-design></component-design>
+			<component-interaction></component-interaction>
+			<store-solution></store-solution>
+			<pros-cons></pros-cons>
+			<store-vuex></store-vuex>
   </div>
 </template>
 <script>
 import eagle from 'eagle.js';
 
-import { Introduction, ComponentDesign } from '@/components';
+import { Introduction, ComponentDesign, ComponentInteraction, StoreSolution, ProsCons, StoreVuex } from '@/components';
 
 export default {
     mixins: [eagle.slideshow],
@@ -19,6 +23,10 @@ export default {
     components: {
         Introduction,
         ComponentDesign,
+        ComponentInteraction,
+        StoreSolution,
+        ProsCons,
+        StoreVuex,
     },
     methods: {
         updateSlides: function() {

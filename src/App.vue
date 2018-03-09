@@ -19,6 +19,7 @@ export default {
 <style lang="less">
 body {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;

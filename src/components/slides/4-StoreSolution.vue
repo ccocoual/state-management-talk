@@ -1,7 +1,7 @@
 <template>
 <eg-transition :enter='enter' :leave='leave' v-if='active'>
-    <div id="ComponentDesign">
-        ComponentDesign
+    <div id="StoreSolution">
+        StoreSolution
     </div>
 </eg-transition>
 </template>
@@ -10,7 +10,7 @@
 import eagle from 'eagle.js';
 
 export default {
-    name: 'ComponentDesign',
+    name: 'StoreSolution',
     mixins: [eagle.slide],
     props: {
         enter: { default: 'fadeInRight' },
