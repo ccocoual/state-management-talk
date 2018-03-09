@@ -1,11 +1,7 @@
 <template>
-  <div id="home">
-      <slide steps="1">
-          <introduction></introduction>
-      </slide>
-      <slide steps="2">
-          <component-design></component-design>
-      </slide>
+  <div id="StateManagement">
+			<introduction></introduction>
+			<component-design></component-design>
   </div>
 </template>
 <script>
@@ -30,6 +26,7 @@ export default {
             this.$nextTick(() => {
                 this.step = +this.$store.state.route.params.step;
             });
+            this.$store.dispatch('setCurrentSlide', this.currentSlideIndex);
         },
         updateURL: function() {
             this.$router.push(`/${this.$store.state.route.path.split('/')[1]}/${this.currentSlideIndex}/${this.step}`);
@@ -40,5 +37,15 @@ export default {
         step: 'updateURL',
         currentSlideIndex: 'updateURL',
     },
+    created() {
+        this.$store.dispatch('setCurrentSlide', +this.$store.state.route.params.slide);
+    },
+    mounted() {
+        this.$store.dispatch('setSlidesCount', this.slides.length);
+    },
 };
 </script>
+<style scoped lang="less">
+#StateManagement {
+}
+</style>

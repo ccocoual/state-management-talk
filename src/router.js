@@ -8,6 +8,10 @@ export default new Router({
     mode: 'history',
     routes: [
         {
+            path: '/',
+            redirect: '/state-management/1/1',
+        },
+        {
             path: '/state-management/:slide/:step',
             name: 'state-management',
             component: StateManagement,

@@ -8,6 +8,7 @@ import store from './store';
 
 // import eagle.js default styles
 import 'eagle.js/dist/eagle.css';
+
 // import animate.css for slide transition
 import 'animate.css';
 
