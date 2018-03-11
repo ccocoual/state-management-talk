@@ -15,5 +15,5 @@ export default new Vuex.Store({
     actions,
     getters,
     strict: true,
-    plugins: createLogger(),
+    plugins: [createLogger()],
 });
