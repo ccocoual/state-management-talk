@@ -55,5 +55,6 @@ export default {
 </script>
 <style scoped lang="less">
 #StateManagement {
+    height: 100vh;
 }
 </style>

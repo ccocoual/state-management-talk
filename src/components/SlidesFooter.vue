@@ -1,21 +1,19 @@
 <template>
   <div class="SlidesFooter">
-      <div class="tagname">
-          <a href="https://www.twitter.com/ccocoual" target="_blank">@ccocoual</a>
-      </div>
-    <div class="pagination">{{ currentSlide }}/{{ slidesCount }}</div>
+    <a class="tagname" @click="openLink()" href="https://www.twitter.com/ccocoual" target="_blank">@ccocoual</a>
+    <div class="pagination">{{ getPagination }}</div>
   </div>
 </template>
 <script>
-import { mapState } from 'vuex';
+import { mapGetters } from 'vuex';
 export default {
     name: 'SlidesFooter',
-    data() {
-        return {
-            prop: 'SlidesFooter',
-        };
+    computed: mapGetters(['getPagination']),
+    methods: {
+        openLink() {
+            window.open('https://www.twitter.com/ccocoual', '_blank');
+        },
     },
-    computed: mapState(['currentSlide', 'slidesCount']),
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -29,8 +27,13 @@ export default {
     display: flex;
     justify-content: space-between;
     .tagname {
-    }
-    .pagination {
+        text-decoration: none;
+        font-weight: bold;
+        &:visited,
+        &:hover,
+        &:active {
+            color: inherit;
+        }
     }
 }
 </style>
