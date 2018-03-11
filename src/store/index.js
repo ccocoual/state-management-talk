@@ -5,7 +5,7 @@ import createLogger from 'vuex/dist/logger';
 import state from './state';
 import mutations from './mutations';
 import * as actions from './actions';
-import getters from './getters';
+import * as getters from './getters';
 
 Vue.use(Vuex);
 

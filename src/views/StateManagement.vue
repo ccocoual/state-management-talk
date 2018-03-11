@@ -1,11 +1,11 @@
 <template>
   <div id="StateManagement">
-			<introduction></introduction>
-			<component-design></component-design>
-			<component-interaction></component-interaction>
-			<store-solution></store-solution>
-			<pros-cons></pros-cons>
-			<store-vuex></store-vuex>
+    <introduction></introduction>
+    <component-design></component-design>
+    <component-interaction></component-interaction>
+    <store-solution></store-solution>
+    <pros-cons></pros-cons>
+    <store-vuex></store-vuex>
   </div>
 </template>
 <script>
